@@ -31,7 +31,7 @@
     }
     }
     down.removeItem=function(index){
-       down.found.splice(index,1);
+       MenuSearchService.removeItem(index);
     }
   }
   MenuSearchService.$inject=['$http','apiBasePath']
@@ -59,6 +59,9 @@
     });
   //  console.log("response.data",response);  //console.log("found outside",found); //  return found;//var found=[];  //  for()
   };
+  service.removeItem=function(index){
+     found.splice(index,1);
+  };
   }
 
   function FoundItemsDirective(){
@@ -69,7 +72,13 @@
         onRemove: '&',
         myresult:'@result'
       },
+        controller:FoundController,
+      controllerAs: 'foundlist',
+      bindToController:true
     };
     return ddo;
+  }
+  function FoundController(){
+    var foundlist =this;
   }
 })();
