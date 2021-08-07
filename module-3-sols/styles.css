@@ -51,17 +51,26 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+ul{
+  list-style-type: none;
+}
 li{
   border-style: solid;
-  border-width: 1%;
-  margin: 1%;
+  border-width: 1px 0px;
+  /*margin: 1%;*/
   padding: 3%;
   position: relative;
+  font-weight: bold;
+  font-family: tahoma;
 
 }
-li button{/*
-  //display: inline-block;*/
-  position: relative;
-  left:50%;
- 
+li button{
+  
+  position: absolute;
+  right:10%;
+}
+li p{
+   width:50%;
+   font-family: serif;
+   font-weight: normal;
 }
