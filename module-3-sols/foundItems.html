@@ -3,11 +3,11 @@
 	<li ng-repeat="item in foundlist.items">
 		{{item.name}}<br>
 		{{item.short_name}}<br>
-		{{ite,.description}}
+		{{item.description}}
 		<button ng-click="down.onRemove({index:$index});">
 		Don't want this one!</button>
 		
 	</li>
 </ul>
-<span>working in dirrective</span>
+<span>working in dirrective   {{down.result}}</span>
 <!-- <span>in directive</span> -->
