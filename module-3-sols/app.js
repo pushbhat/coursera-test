@@ -11,11 +11,11 @@
   function NarrowItDownController(MenuSearchService){
     var down=this;
     down.searchTerm="";
-    down.result="false";
+    down.result=false;
     down.getresult=function(){
       console.log(down.searchTerm);
       if( down.searchTerm===" "||  down.searchTerm.length==0){
-        down.result="true";
+        down.result=true;
       }
       else{
       var promise=MenuSearchService.getMatchedMenuItems(down.searchTerm);
@@ -32,6 +32,9 @@
     }
     down.removeItem=function(index){
        MenuSearchService.removeItem(index);
+    }
+    down.myresult=function(){
+      return down.result;
     }
   }
   MenuSearchService.$inject=['$http','apiBasePath']
@@ -70,7 +73,7 @@
       scope:{
         items:'<',
         onRemove: '&',
-        myresult:'@result'
+        onCheck:'&',
       },
         controller:FoundController,
       controllerAs: 'foundlist',
