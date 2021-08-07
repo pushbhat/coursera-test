@@ -1,12 +1,12 @@
 <span ng-if="down.myresult">Nothing found</span>
 <ul>
 	<li ng-repeat="item in foundlist.items">
-		{{item.name}}<br>
-		{{item.short_name}}<br>
-		{{item.description}}
+		{{item.name}} [{{item.short_name}}]<br>
 		<button ng-click="foundlist.onRemove({index:$index});">
 		Don't want this one!</button>
-		
+		<p>
+			{{item.description}}	
+		</p>
 	</li>
 </ul>
 <span>working in dirrective result update again  {{down.result}}</span>
