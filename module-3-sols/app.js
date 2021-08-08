@@ -13,11 +13,14 @@
     down.searchTerm="";
     down.result=false;
     down.getresult=function(){
+      down.result=false;
       console.log(down.searchTerm);
       if( down.searchTerm===" "||  down.searchTerm.length==0){
         down.result=true;
+        down.found[];
       }
       else{
+       down.found[]; 
       var promise=MenuSearchService.getMatchedMenuItems(down.searchTerm);
       console.log("promise",promise);
       promise.then(function(response){
