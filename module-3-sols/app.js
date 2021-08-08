@@ -55,6 +55,7 @@
     //  console.log("response in service",response);
       items=response.data.menu_items;
       //console.log("Items",items);
+      found=[];
       for(let i=0;i<items.length;i++){
         if(items[i].description.indexOf(searchTerm)!=-1){
           found.push(items[i]);
