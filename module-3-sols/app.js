@@ -26,7 +26,7 @@
       promise.then(function(response){
       //  console.log("inside then");
         down.found=response;
-        console.log("down",down.found);
+        console.log("down.found in ctrl",down.found);
       })
       .catch(function(error){
         console.log("something went wrong");
@@ -60,7 +60,7 @@
           found.push(items[i]);
         }
       }
-    console.log("found",found);
+    console.log("found in service ",found);
       return found;
     });
   //  console.log("response.data",response);  //console.log("found outside",found); //  return found;//var found=[];  //  for()
