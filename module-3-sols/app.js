@@ -20,7 +20,7 @@
         down.found=[];
       }
       else{
-       down.found[]; 
+       down.found=[]; 
       var promise=MenuSearchService.getMatchedMenuItems(down.searchTerm);
       console.log("promise",promise);
       promise.then(function(response){
