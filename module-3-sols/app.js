@@ -25,6 +25,9 @@
       console.log("promise",promise);
       promise.then(function(response){
         down.found=response;
+        if(down.found.length==0){
+              down.result=true;
+        }
         console.log("down.found in ctrl",down.found);
       })
       .catch(function(error){
