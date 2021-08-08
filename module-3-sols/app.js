@@ -24,7 +24,6 @@
       var promise=MenuSearchService.getMatchedMenuItems(down.searchTerm);
       console.log("promise",promise);
       promise.then(function(response){
-      //  console.log("inside then");
         down.found=response;
         console.log("down.found in ctrl",down.found);
       })
@@ -51,10 +50,7 @@
       method:"GET",
       url:apiBasePath,
     }).then(function(response){
-      //var found =response.data
-    //  console.log("response in service",response);
       items=response.data.menu_items;
-      //console.log("Items",items);
       found=[];
       for(let i=0;i<items.length;i++){
         if(items[i].description.indexOf(searchTerm)!=-1){
@@ -64,7 +60,6 @@
     console.log("found in service ",found);
       return found;
     });
-  //  console.log("response.data",response);  //console.log("found outside",found); //  return found;//var found=[];  //  for()
   };
   service.removeItem=function(index){
      found.splice(index,1);
