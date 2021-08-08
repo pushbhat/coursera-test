@@ -12,7 +12,9 @@
     var down=this;
     down.searchTerm="";
     down.result=false;
+    
     down.getresult=function(){
+      console.log('updated);
       down.result=false;
       console.log(down.searchTerm);
       if( down.searchTerm===" "||  down.searchTerm.length==0){
