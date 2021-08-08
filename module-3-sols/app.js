@@ -17,7 +17,7 @@
       console.log(down.searchTerm);
       if( down.searchTerm===" "||  down.searchTerm.length==0){
         down.result=true;
-        down.found[];
+        down.found=[];
       }
       else{
        down.found[]; 
