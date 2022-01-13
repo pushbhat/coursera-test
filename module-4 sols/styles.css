@@ -1,0 +1,26 @@
+li {
+    border-style: solid;
+    border-width:  thin 0px;
+    border-color: #676767;
+    margin: 0 1%;
+   list-style: none;
+   padding: 1%;
+   font-size: large;
+   }
+
+body{
+    font-family:  Tahoma,Helvetica, sans-serif;
+}
+
+h3{
+    padding:0 3%;
+}
+h1{
+    padding:0 3%;
+}
+.home{
+    font-size: x-large;
+    /* border-style:solid; */
+    padding:5%;
+    margin: 3%;
+}
